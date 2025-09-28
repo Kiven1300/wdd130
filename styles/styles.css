@@ -2,26 +2,24 @@
 
 :root {
     --primary-color: darkblue;
+    --secondary-color: #eee;
     --text-light: white;
     --text-dark: #333;
-    --border-color: black;
     --shadow-color: gray;
-    --bg-light: #eee;
-
+    --border-color: black;
+    --border-light: 1px solid rgb(0 0 0 / 0.2);
+    --border-solid: 1px solid var(--border-color);
+    --box-shadow: 0 0 30px var(--shadow-color);
     --img-width-main: 150px;
     --img-width-aside: 200px;
     --img-height: auto;
-
+    --aside-width: 20rem;
+    --main-max-width: 840px;
     --padding-small: 10px;
     --padding-medium: 20px;
     --padding-aside: 1rem;
-
     --margin-small: 1rem;
     --margin-top-footer: 15px;
-
-    --box-shadow: 0 0 30px var(--shadow-color);
-    --border-light: 1px solid rgba(0, 0, 0, 0.2);
-    --border-solid: 1px solid var(--border-color);
 }
 
 nav {
@@ -47,23 +45,22 @@ img {
 }
 
 p {
-    padding: 0;
+    padding: var(--padding-small);
 }
 
 main {
-    max-width: 840px;
+    max-width: var(--main-max-width);
 }
 
 aside {
-    width: 20rem;
+    width: var(--aside-width);
     margin: var(--margin-small);
-    border: var(--border-light); 
+    border: var(--border-light); /*1*/
     padding: var(--padding-aside);
-    background-color: var(--bg-light);
+    background-color: var(--secondary-color);
     color: var(--text-dark);
     text-align: center;
 }
-
 aside img {
     width: var(--img-width-aside);
     height: var(--img-height);
@@ -72,6 +69,10 @@ aside img {
 main img {
     width: var(--img-width-main);
     height: var(--img-height);
+}
+
+p {
+    padding: 0;
 }
 
 footer {
