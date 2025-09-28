@@ -1,28 +1,53 @@
 /* example of comment in CSS */
+
+:root {
+    --primary-color: darkblue;
+    --text-light: white;
+    --text-dark: #333;
+    --border-color: black;
+    --shadow-color: gray;
+    --bg-light: #eee;
+
+    --img-width-main: 150px;
+    --img-width-aside: 200px;
+    --img-height: auto;
+
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-aside: 1rem;
+
+    --margin-small: 1rem;
+    --margin-top-footer: 15px;
+
+    --box-shadow: 0 0 30px var(--shadow-color);
+    --border-light: 1px solid rgba(0, 0, 0, 0.2);
+    --border-solid: 1px solid var(--border-color);
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--padding-small);
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     display: block;
-    padding: 20px;
+    padding: var(--padding-medium);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--primary-color);
 }
 
 img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    box-shadow: 0 0 30px gray;
+    width: var(--img-width-main);
+    height: var(--img-height);
+    border: var(--border-solid);
+    box-shadow: var(--box-shadow);
 }
 
 p {
-    padding: 10px;
+    padding: 0;
 }
 
 main {
@@ -31,29 +56,26 @@ main {
 
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0/ 0.2); /*1*/
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    margin: var(--margin-small);
+    border: var(--border-light); 
+    padding: var(--padding-aside);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     text-align: center;
 }
+
 aside img {
-    width: 200px;
-    height: auto;
+    width: var(--img-width-aside);
+    height: var(--img-height);
 }
 
 main img {
-    width: 150px;
-    height: auto;
-}
-
-p {
-    padding: 0;
+    width: var(--img-width-main);
+    height: var(--img-height);
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-top: var(--margin-top-footer);
+    border-top: var(--border-solid);
     text-align: center;
 }
