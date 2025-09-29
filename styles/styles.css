@@ -1,4 +1,9 @@
 /* example of comment in CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --primary-color: darkblue;
@@ -42,6 +47,7 @@ img {
     height: var(--img-height);
     border: var(--border-solid);
     box-shadow: var(--box-shadow);
+
 }
 
 p {
@@ -61,22 +67,47 @@ aside {
     color: var(--text-dark);
     text-align: center;
 }
-aside img {
-    width: var(--img-width-aside);
-    height: var(--img-height);
-}
-
 main img {
     width: var(--img-width-main);
     height: var(--img-height);
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
-p {
-    padding: 0;
+aside {
+    width: 20em;
+    text-align: center;
+    position: relative;
 }
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+aside h2 {
+    position: absolute;
+    top: -5px;
+    left: 50px;
+    background-color: #eee;
+    color: black;
+}
+
 
 footer {
     margin-top: var(--margin-top-footer);
     border-top: var(--border-solid);
     text-align: center;
+}
+
+/*Class Selectors*/
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #eee;
+    color: #000;
 }
