@@ -4,13 +4,8 @@
   --accent1-color: #264653;
   --accent2-color: #e3c46a;
   --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: "Arial", "Helvetica", sans-serif;
+  --body-font: "Arial", "Helvetica", sans-serif;
 }
-
-* {
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
 
 * {
     margin: 0;
@@ -18,12 +13,57 @@ header {
     box-sizing: border-box;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-}
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #fff;
 }
 
+/* Header Grid and Flex */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 0;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+    justify-self: start;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.main-nav a {
+    color: var(--accent2-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Layout */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
@@ -35,15 +75,11 @@ h1, h2 {
 }
 
 nav, p, section, article {
-
     margin: 16px;
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
-}
-
+/* Hero Section */
 .hero {
     position: relative;
 }
@@ -68,4 +104,104 @@ h1 {
 .hero article img {
     float: right;
     width: 125px;
+}
+
+/* History Section Layout */
+.history-section {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.history-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.history-section h2 {
+    margin-bottom: 1rem;
+}
+
+/* Adventures Section Layout */
+.adventures-section {
+    margin: 2rem 0;
+}
+
+.adventures-section h2 {
+    margin-bottom: 1rem;
+}
+
+.adventures-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.adventures-grid figure {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(38,70,83,0.08);
+}
+
+.adventures-grid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.adventures-grid figcaption {
+    font-size: 0.95rem;
+    color: var(--accent1-color);
+    font-weight: 500;
+}
+
+/* Footer Grid - Same style as Header */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.footer-grid p {
+    color: var(--accent2-color);
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.socialmedia a:hover {
+    transform: scale(1.1);
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
 }
